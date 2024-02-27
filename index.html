@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,1,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mont: ["Montserrat", "sans-serif"],
+              roboto: ["Roboto", "sans-serif"],
+              colors: {
+                clifford: "#da373d",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body class="bg-white">
+    <!-- header -->
+    <header>
+      <nav class="m-28 mt-2 p-10 mb-0 pb-5 bg-slate-100">
+        <div class="flex justify-center gap-3 text-2xl font-mont">
+          <h2>Money Manager</h2>
+          <button><span class="material-symbols-outlined"> paid </span></button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Only section -->
+      <section>
+        <div
+          class="grid grid-cols-2 gap-10 m-28 p-10 bg-slate-100 mt-0 pt-5 mb-0"
+        >
+          <!--Picture div  -->
+          <!-- style ="background-image: url(images/3324677.jpg)" -->
+          <div
+            class="ml-5 bg-slate-700 bg-cover bg-center"
+          >
+            <img src="images/3324677.jpg" alt="" />
+          </div>
+
+          <!-- Calculation div -->
+          <div
+            class="mr-5 bg-red-200 grid grid-cols place-content-center text-center font-roboto p-10"
+          >
+            <!-- 1. income div -->
+            <div class="">
+              <h3>Income</h3>
+              <div class="flex justify-center gap-2">
+                <h5>Income:</h5>
+                <input type="number" type="text" placeholder="Your income" />
+              </div>
+            </div>
+            <!-- 2. expense div -->
+            <div class="grid gap-y-3">
+              <h3>Expense</h3>
+              <div class="flex justify-center gap-2">
+                <h5>Food:</h5>
+                <input type="number" type="text" placeholder="Your income" />
+              </div>
+              <div class="flex justify-center gap-2">
+                <h5>Rent:</h5>
+                <input type="number" type="text" placeholder="Your income" />
+              </div>
+              <div class="flex justify-center gap-2">
+                <h5>Clothes:</h5>
+                <input type="number" type="text" placeholder="Your income" />
+              </div>
+            </div>
+            <!-- 3. calculate button div -->
+            <div>
+              <button class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5">
+                Calculate
+              </button>
+            </div>
+            <!-- 4. calculate Total expense and balance -->
+            <div>
+              <div>
+                <h3>Total Expense: <span>0</span></h3>
+              </div>
+              <div>
+                <h3>Balance: <span>0</span></h3>
+              </div>
+            </div>
+            <!-- 5. saving percent -->
+            <div>
+              <h3>
+                Save:
+                <span
+                  ><input type="number" type="text" placeholder="Amount"
+                /></span>
+                <span>%</span>
+                <span
+                  ><button
+                    class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5"
+                  >
+                    Save
+                  </button></span
+                >
+              </h3>
+            </div>
+            <!-- 6. saving amount and remaining balance -->
+            <div>
+              <h3>Saving Amount: <span>2000</span></h3>
+              <h3>Remaining Balance: <span>2500</span></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
