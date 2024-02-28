@@ -22,6 +22,7 @@ document.getElementById('calculation-button').addEventListener('click', function
  //balance calculation 
  const calculatedBalance = incomeConvert - addAllExpenses;
  balance.innerText = calculatedBalance;
+ errorMessage();
 })
 // add js to save button
 document.getElementById('save-button').addEventListener('click', function () {
@@ -46,4 +47,33 @@ document.getElementById('save-button').addEventListener('click', function () {
  const calculatedRemainingBalance = balanceTextConverted - calculateSavingAmount;
  remainingBalance.innerText = calculatedRemainingBalance;
 
+ errorMessage();
 })
+
+// show the error message function
+function errorMessage() {
+ const inputValues = document.getElementsByTagName("input");
+
+ for (const input of inputValues) {
+   // Check if the value is not a number
+   if (isNaN(input.value)) {
+     // Show error message
+     const errorMessage = "Please put a number";
+     alert(errorMessage); 
+
+     // Change input field color to red
+     input.style.borderColor = "red";
+     input.style.borderWidth = "2px"; 
+     input.style.borderStyle = "solid";
+
+     // Stop further processing for this input
+     return;
+   } else {
+     // If the input value is a number, reset styling
+     // input.style.borderColor = "green"; 
+     // input.style.borderWidth = "2px"; 
+     // input.style.borderStyle = "solid"; 
+   }
+ }
+}
+
