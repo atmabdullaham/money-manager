@@ -53,7 +53,7 @@
         <div
           class="grid grid-cols-2 gap-10 m-28 p-10 bg-slate-100 mt-0 pt-5 mb-0"
         >
-          <!--Picture div  -->
+          <!--a. Picture div  -->
           <!-- style ="background-image: url(images/3324677.jpg)" -->
           <div
             class="ml-5 bg-slate-700 bg-cover bg-center shadow-2xl rounded-sm"
@@ -61,7 +61,7 @@
             <img src="images/2364249.jpg" alt="" />
           </div>
 
-          <!-- Calculation div -->
+          <!--b. Calculation div -->
           <div
             class="mr-5 bg-gray-100 shadow-2xl grid grid-cols place-content-center text-center font-roboto p-10"
           >
@@ -70,7 +70,7 @@
               <h3>Income</h3>
               <div class="flex justify-center gap-2">
                 <h5>Income:</h5>
-                <input
+                <input id="income-input"
                   class="bg-gray-300 rounded border-gray-100 border-4"
                   type="number"
                   type="text"
@@ -83,30 +83,30 @@
               <h3>Expense</h3>
               <div class="flex justify-center gap-2">
                 <h5>Food:</h5>
-                <input type="number" type="text" placeholder="Your income" />
+                <input id="food-input" type="number" type="text" placeholder="Your income" />
               </div>
               <div class="flex justify-center gap-2">
                 <h5>Rent:</h5>
-                <input type="number" type="text" placeholder="Your income" />
+                <input id="rent-input" type="number" type="text" placeholder="Your income" />
               </div>
               <div class="flex justify-center gap-2">
                 <h5>Clothes:</h5>
-                <input type="number" type="text" placeholder="Your income" />
+                <input id="clothes-input" type="number" type="text" placeholder="Your income" />
               </div>
             </div>
             <!-- 3. calculate button div -->
             <div>
-              <button class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5">
+              <button id="calculation-button" class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5">
                 Calculate
               </button>
             </div>
             <!-- 4. calculate Total expense and balance -->
             <div>
               <div>
-                <h3>Total Expense: <span>0</span></h3>
+                <h3>Total Expense: <span id="total-expense">00</span></h3>
               </div>
               <div>
-                <h3>Balance: <span>0</span></h3>
+                <h3>Balance: <span id="balance">0</span></h3>
               </div>
             </div>
             <!-- 5. saving percent -->
