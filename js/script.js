@@ -80,7 +80,7 @@ document.getElementById('save-button').addEventListener('click', function () {
  console.log(calculateSavingAmount, "it is the calculated value of saving amount");
 
  //remaining balance
- const balanceText = document.getElementsByTagName('balance').innerText;
+ const balanceText = document.getElementById('balance').innerText;
  const balanceTextConverted = parseFloat(balanceText);
 
 
