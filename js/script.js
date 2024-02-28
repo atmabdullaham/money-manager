@@ -76,4 +76,6 @@ function errorMessage() {
    }
  }
 }
-
+function error2(){
+ const totalExpense = document.getElementById()
+} 
