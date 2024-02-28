@@ -45,3 +45,14 @@ document.getElementById('calculation-button').addEventListener('click', function
  balance.innerText = calculatedBalance;
 
 })
+
+// add js to save button
+document.getElementById('save-button').addEventListener('click', function () {
+ 
+ //saving percentage input
+ const savingPercentage = document.getElementById('saving-percentage-input').value;
+ const savingPercentageConvert = parseFloat(savingPercentage);
+
+ 
+
+})
