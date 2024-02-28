@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -41,8 +42,8 @@
     <!-- header -->
     <header>
       <nav class="m-28 mt-2 p-10 mb-0 pb-5 bg-slate-100">
-        <div class="flex justify-center gap-3 text-2xl font-mont">
-          <h2>Money Manager</h2>
+        <div class="flex justify-center gap-3 text-2xl font-mont text-heading">
+          <h2 class="text-heading">Money Manager</h2>
           <button><span class="material-symbols-outlined"> paid </span></button>
         </div>
       </nav>
@@ -56,22 +57,23 @@
           <!--a. Picture div  -->
           <!-- style ="background-image: url(images/3324677.jpg)" -->
           <div
-            class="ml-5 bg-slate-700 bg-cover bg-center shadow-2xl rounded-sm"
+            class="ml-5 bg-slate-700 bg-cover bg-center shadow-xl rounded-sm"
           >
             <img src="images/2364249.jpg" alt="" />
           </div>
 
           <!--b. Calculation div -->
           <div
-            class="mr-5 bg-gray-100 shadow-2xl grid grid-cols place-content-center text-center font-roboto p-10"
+            class="mr-5 bg-gray-100 shadow-xl grid grid-cols place-content-center text-center font-roboto p-10 gap-1"
           >
             <!-- 1. income div -->
-            <div class="">
+            <div class="grid gap-2">
               <h3>Income</h3>
-              <div class="flex justify-center gap-2">
+              <div class="flex justify-end gap-2 pr-8">
                 <h5>Income:</h5>
-                <input id="income-input"
-                  class="bg-gray-300 rounded border-gray-100 border-4"
+                <input
+                  id="income-input"
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-52"
                   type="number"
                   type="text"
                   placeholder="Your income"
@@ -79,24 +81,171 @@
               </div>
             </div>
             <!-- 2. expense div -->
-            <div class="grid gap-y-3">
+            <div class="grid gap-2">
               <h3>Expense</h3>
-              <div class="flex justify-center gap-2">
-                <h5>Food:</h5>
-                <input id="food-input" type="number" type="text" placeholder="Your income" />
+            <!-- i, Food expense -->
+              <div class="flex justify-end gap-2 pr-8">
+                <!-- <h5>Food:</h5> -->
+                <div class="flex gap-3">
+                  <label
+                    for="Food"
+                    class="text-sm font-medium grid items-center leading-6 text-gray-900"
+                    >Food</label
+                  >
+                  <div class="relative mt-2 rounded-md shadow-sm">
+                    <div
+                      class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                    >
+                      <span class="text-gray-500 sm:text-sm">$</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="food-input"
+                      class="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="0.00"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <label for="currency" class="sr-only">Currency</label>
+                      <select
+                        id="currency"
+                        name="currency"
+                        class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                      >
+                        <option>USD</option>
+                        <option>CAD</option>
+                        <option>EUR</option>
+                        <option>TAKA</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-44 px-6"
+                  id="food-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                /> -->
               </div>
-              <div class="flex justify-center gap-2">
+              <!-- ii, Rent Expense -->
+              <div class="flex justify-end gap-2 pr-8">
+                <!-- <h5>Food:</h5> -->
+                <div class="flex gap-3">
+                  <label
+                    for="Rent"
+                    class="text-sm font-medium grid items-center leading-6 text-gray-900"
+                    >Rent</label
+                  >
+                  <div class="relative mt-2 rounded-md shadow-sm">
+                    <div
+                      class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                    >
+                      <span class="text-gray-500 sm:text-sm">$</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="rent-input"
+                      class="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="0.00"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <label for="currency" class="sr-only">Currency</label>
+                      <select
+                        id="currency"
+                        name="currency"
+                        class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                      >
+                        <option>USD</option>
+                        <option>CAD</option>
+                        <option>EUR</option>
+                        <option>TAKA</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-44 px-6"
+                  id="food-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                /> -->
+              </div>
+              <!-- <div class="flex justify-end gap-2 pr-8">
                 <h5>Rent:</h5>
-                <input id="rent-input" type="number" type="text" placeholder="Your income" />
-              </div>
-              <div class="flex justify-center gap-2">
+                <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-52"
+                  id="rent-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                />
+              </div> -->
+
+            <!-- iii, Cloths expenses -->
+              <!-- <div class="flex justify-end gap-2 pr-8">
                 <h5>Clothes:</h5>
-                <input id="clothes-input" type="number" type="text" placeholder="Your income" />
+                <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-52"
+                  id="clothes-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                />
+              </div> -->
+              <div class="flex justify-end gap-2 pr-8">
+                <!-- <h5>Food:</h5> -->
+                <div class="flex gap-3">
+                  <label
+                    for="Clothes"
+                    class="text-sm font-medium grid items-center leading-6 text-gray-900"
+                    >Clothes</label
+                  >
+                  <div class="relative mt-2 rounded-md shadow-sm">
+                    <div
+                      class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                    >
+                      <span class="text-gray-500 sm:text-sm">$</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="clothes-input"
+                      class="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="0.00"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <label for="currency" class="sr-only">Currency</label>
+                      <select
+                        id="currency"
+                        name="currency"
+                        class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                      >
+                        <option>USD</option>
+                        <option>CAD</option>
+                        <option>EUR</option>
+                        <option>TAKA</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-44 px-6"
+                  id="food-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                /> -->
               </div>
             </div>
             <!-- 3. calculate button div -->
             <div>
-              <button id="calculation-button" class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5">
+              <button
+                id="calculation-button"
+                class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5"
+              >
                 Calculate
               </button>
             </div>
@@ -114,11 +263,17 @@
               <h3>
                 Save:
                 <span
-                  ><input id="saving-percentage-input" type="number" type="text" placeholder="Amount"
+                  ><input
+                    class="bg-gray-300 rounded border-gray-100 border-4 w-52"
+                    id="saving-percentage-input"
+                    type="number"
+                    type="text"
+                    placeholder="Amount"
                 /></span>
                 <span>%</span>
                 <span
-                  ><button id="save-button"
+                  ><button
+                    id="save-button"
                     class="bg-blue-500 rounded text-white m-2 p-2 pr-5 pl-5"
                   >
                     Save
@@ -129,7 +284,9 @@
             <!-- 6. saving amount and remaining balance -->
             <div>
               <h3>Saving Amount: <span id="saving-amount">00</span></h3>
-              <h3>Remaining Balance: <span id="remaining-balance">000</span></h3>
+              <h3>
+                Remaining Balance: <span id="remaining-balance">000</span>
+              </h3>
             </div>
           </div>
         </div>
