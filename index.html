@@ -70,6 +70,50 @@
             <div class="grid gap-2">
               <h3>Income</h3>
               <div class="flex justify-end gap-2 pr-8">
+                <!-- <h5>Food:</h5> -->
+                <div class="flex gap-3">
+                  <label
+                    for="Income"
+                    class="text-sm font-medium grid items-center leading-6 text-gray-900"
+                    >Income</label
+                  >
+                  <div class="relative mt-2 rounded-md shadow-sm">
+                    <div
+                      class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                    >
+                      <span class="text-gray-500 sm:text-sm">$</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="income-input"
+                      class="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="0.00"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <label for="currency" class="sr-only">Currency</label>
+                      <select
+                        id="currency"
+                        name="currency"
+                        class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                      >
+                        <option>USD</option>
+                        <option>CAD</option>
+                        <option>EUR</option>
+                        <option>TAKA</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <input
+                  class="bg-gray-300 rounded border-gray-100 border-4 w-44 px-6"
+                  id="food-input"
+                  type="number"
+                  type="text"
+                  placeholder="Your income"
+                /> -->
+              </div>
+              <!-- <div class="flex justify-end gap-2 pr-8">
                 <h5>Income:</h5>
                 <input
                   id="income-input"
@@ -78,12 +122,12 @@
                   type="text"
                   placeholder="Your income"
                 />
-              </div>
+              </div> -->
             </div>
             <!-- 2. expense div -->
             <div class="grid gap-2">
               <h3>Expense</h3>
-            <!-- i, Food expense -->
+              <!-- i, Food expense -->
               <div class="flex justify-end gap-2 pr-8">
                 <!-- <h5>Food:</h5> -->
                 <div class="flex gap-3">
@@ -184,17 +228,8 @@
                 />
               </div> -->
 
-            <!-- iii, Cloths expenses -->
-              <!-- <div class="flex justify-end gap-2 pr-8">
-                <h5>Clothes:</h5>
-                <input
-                  class="bg-gray-300 rounded border-gray-100 border-4 w-52"
-                  id="clothes-input"
-                  type="number"
-                  type="text"
-                  placeholder="Your income"
-                />
-              </div> -->
+              <!-- iii, Cloths expenses -->
+
               <div class="flex justify-end gap-2 pr-8">
                 <!-- <h5>Food:</h5> -->
                 <div class="flex gap-3">
@@ -259,9 +294,45 @@
               </div>
             </div>
             <!-- 5. saving percent -->
-            <div>
-              <h3>
-                Save:
+            <div class="flex">
+              <div class="flex justify-end gap-2 pr-2">
+                <!-- <h5>Food:</h5> -->
+                <div class="flex gap-3">
+                  <label
+                    for="Saving"
+                    class="text-sm font-medium grid items-center leading-6 text-gray-900"
+                    >Saving</label
+                  >
+                  <div class="relative mt-2 rounded-md shadow-sm">
+                    <div
+                      class="pointer-events-none absolute py-2 left-0 flex items-center pl-3"
+                    >
+                      <span class="text-gray-500 sm:text-sm">$</span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="saving-percentage-input"
+                      class="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="0.00"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <label for="currency" class="sr-only">Currency</label>
+                      <select
+                        id="currency"
+                        name="currency"
+                        class="h-9 rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm pb-2 mb-2"
+                      >
+                        <option>USD</option>
+                        <option>CAD</option>
+                        <option>EUR</option>
+                        <option>TAKA</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Save:
                 <span
                   ><input
                     class="bg-gray-300 rounded border-gray-100 border-4 w-52"
@@ -269,8 +340,9 @@
                     type="number"
                     type="text"
                     placeholder="Amount"
-                /></span>
-                <span>%</span>
+                /></span> -->
+              <div>
+                <span class="font-semibold">%</span>
                 <span
                   ><button
                     id="save-button"
@@ -279,7 +351,7 @@
                     Save
                   </button></span
                 >
-              </h3>
+              </div>
             </div>
             <!-- 6. saving amount and remaining balance -->
             <div>
