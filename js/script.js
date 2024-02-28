@@ -46,36 +46,39 @@ document.getElementById('calculation-button').addEventListener('click', function
 
 })
 
+
+
 // add js to save button
 document.getElementById('save-button').addEventListener('click', function () {
  //saving percentage input
  const savingPercentage = document.getElementById('saving-percentage-input').value;
- // console.log(savingPercentage)
+ console.log(savingPercentage, 'Saving percentage')
 
  const savingPercentageConvert = parseFloat(savingPercentage);
  // console.log(savingPercentageConvert)
- const percent = .1;
+ const percentC = 100;
 
- // console.log(percent)
+ console.log(percentC, 'percentag');
 
  //saving amount
- const savingAmount = document.getElementById('saving-amount').innerText;
+ const savingAmount = document.getElementById('saving-amount');
  // 1
- console.log(savingAmount)
+ console.log(savingAmount , " Saving Amount")
 
  //income 
  const income = document.getElementById('income-input').value;
  const incomeConvert = parseFloat(income);
  // 2
- console.log(incomeConvert);
+ console.log(incomeConvert, "income convert");
 
 
  //calculate saving amount and set 
- const calculateSavingAmount = incomeConvert * (savingPercentageConvert * percent)
+ const calculateSavingAmount = incomeConvert * (savingPercentageConvert / percentC)
 
  savingAmount.innerText = calculateSavingAmount;
  // 3
- console.log(calculateSavingAmount);
+ console.log(calculateSavingAmount, "it is the calculated value of saving amount");
 
-
+//remaining balance
+const remainingBalance = document.getElementsByTagName('')
 })
