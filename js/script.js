@@ -1,4 +1,4 @@
-document.getElementById('calculation-button').addEventListener('click', function(){
+document.getElementById('calculation-button').addEventListener('click', function () {
  //expense 1
  const expense1 = document.getElementById('food-input').value;
  console.log(expense1)
@@ -7,9 +7,9 @@ document.getElementById('calculation-button').addEventListener('click', function
 
 
  // expense 2
-const expense2 = document.getElementById('rent-input').value;
-const expense2Convert = parseFloat(expense2);
-console.log(expense2)
+ const expense2 = document.getElementById('rent-input').value;
+ const expense2Convert = parseFloat(expense2);
+ console.log(expense2)
 
 
  //expense 3
@@ -19,11 +19,11 @@ console.log(expense2)
 
  // total expense
  const totalExpense = document.getElementById('total-expense');
- const totalExpenseText = totalExpense.innerText;
- const totalExpenseConvert = parseFloat(totalExpenseText);
+ // const totalExpenseText = totalExpense.innerText;
+ // const totalExpenseConvert = parseFloat(totalExpenseText);
 
  //Calculate total expense
- const addAllExpenses = expense1Convert + expense2Convert + expense3Convert + totalExpenseConvert;
+ const addAllExpenses = expense1Convert + expense2Convert + expense3Convert;
 
  console.log(addAllExpenses)
 
@@ -32,5 +32,16 @@ console.log(expense2)
  // console.log(totalExpense);
 
  //income 
- const income = document.getElementById('income-input');
+ const income = document.getElementById('income-input').value;
+ const incomeConvert = parseFloat(income);
+
+ //balance 
+ const balance = document.getElementById('balance');
+ // const balanceText = balance.innerText;
+ // const balanceTextConvert = parseFloat(balanceText);
+
+ //balance calculation 
+ const calculatedBalance = incomeConvert - addAllExpenses;
+ balance.innerText = calculatedBalance;
+
 })
