@@ -48,11 +48,34 @@ document.getElementById('calculation-button').addEventListener('click', function
 
 // add js to save button
 document.getElementById('save-button').addEventListener('click', function () {
- 
  //saving percentage input
  const savingPercentage = document.getElementById('saving-percentage-input').value;
- const savingPercentageConvert = parseFloat(savingPercentage);
+ // console.log(savingPercentage)
 
- 
+ const savingPercentageConvert = parseFloat(savingPercentage);
+ // console.log(savingPercentageConvert)
+ const percent = .1;
+
+ // console.log(percent)
+
+ //saving amount
+ const savingAmount = document.getElementById('saving-amount').innerText;
+ // 1
+ console.log(savingAmount)
+
+ //income 
+ const income = document.getElementById('income-input').value;
+ const incomeConvert = parseFloat(income);
+ // 2
+ console.log(incomeConvert);
+
+
+ //calculate saving amount and set 
+ const calculateSavingAmount = incomeConvert * (savingPercentageConvert * percent)
+
+ savingAmount.innerText = calculateSavingAmount;
+ // 3
+ console.log(calculateSavingAmount);
+
 
 })
