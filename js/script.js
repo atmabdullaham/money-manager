@@ -63,7 +63,7 @@ document.getElementById('save-button').addEventListener('click', function () {
  //saving amount
  const savingAmount = document.getElementById('saving-amount');
  // 1
- console.log(savingAmount , " Saving Amount")
+ console.log(savingAmount, " Saving Amount")
 
  //income 
  const income = document.getElementById('income-input').value;
@@ -79,6 +79,17 @@ document.getElementById('save-button').addEventListener('click', function () {
  // 3
  console.log(calculateSavingAmount, "it is the calculated value of saving amount");
 
-//remaining balance
-const remainingBalance = document.getElementsByTagName('')
+ //remaining balance
+ const balanceText = document.getElementsByTagName('balance').innerText;
+ const balanceTextConverted = parseFloat(balanceText);
+
+
+ const remainingBalance = document.getElementById('remaining-balance');
+ const remainingBalanceText = remainingBalance.innerText;
+ const remainingBalanceTextConverted = parseFloat(remainingBalanceText);
+console.log(remainingBalanceTextConverted, "it is the remaining balance first")
+
+ const calculatedRemainingBalance = balanceTextConverted - calculateSavingAmount + remainingBalanceTextConverted;
+ remainingBalance.innerText = calculatedRemainingBalance;
+ console.log(calculatedRemainingBalance, " is the calculated remaining balance")
 })
