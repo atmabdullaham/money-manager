@@ -113,6 +113,66 @@ function errorMessage() {
     }
   }
 }
+
+// const inputValues = document.getElementsByTagName("input");
+// const button = document.getElementById("calculation-button");
+
+// button.classList.add("pointer-events-none") = true; //setting button state to disabled
+// button.classList.add("opacity-50") = true; //setting button state to disabled
+// for (const input of inputValues){
+//   input.addEventListener("change", stateHandle);
+//   function stateHandle() {
+//     if (input.value === "") {
+//         button.classList.add("pointer-events-none") = true; //button remains disabled
+//     } else {
+//       button.classList.add("pointer-events-none") = false; //button is enabled
+//     }
+// }
+// }
+
+const inputValuesSave = document.getElementById("saving-percentage-input");
+const saveButton = document.getElementById("save-button");
+
+ saveButton.classList.add("pointer-events-none", "opacity-50"); // setting button state to disabled
+
+
+  inputValuesSave.addEventListener("change", stateHandl);
+
+  function stateHandl() {
+    if (inputValuesSave.value === "") {
+    saveButton.classList.add("pointer-events-none", "opacity-50"); // button remains disabled
+    } else {
+      saveButton.classList.remove("pointer-events-none", "opacity-50"); // button is enabled
+    }
+  }
+
+
+const inputValues = document.getElementsByTagName("input");
+const button = document.getElementById("calculation-button");
+
+// Initial state: Disable button
+button.classList.add("pointer-events-none", "opacity-50");
+
+for (const input of inputValues) {
+  input.addEventListener("change", stateHandle);
+}
+
+function stateHandle() {
+  // Check if the first 4 inputs have values
+  const firstFourInputs = Array.from(inputValues).slice(0, 4);
+  const allInputsFilled = firstFourInputs.every((input) => input.value.trim() !== "");
+
+  // Enable or disable the button based on the condition
+  if (allInputsFilled) {
+    button.classList.remove("pointer-events-none", "opacity-50"); // Enable button
+  } else {
+    button.classList.add("pointer-events-none", "opacity-50"); // Disable button
+  }
+}
+
+
+
+
 // function error2() {
 //   const totalExpense = document.getElementById('total-expense').innerText
 //   const totalExpenseConverted = parseFloat(totalExpense);
